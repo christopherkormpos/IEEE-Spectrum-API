@@ -1,5 +1,4 @@
 //npm run start
-
 const port = process.env.PORT || 8000
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -46,7 +45,7 @@ app.get('/', (req, res) => {
                     newsImgSrc
                 })
             })
-            //Simple check for duplicate objects if any (chech SET type)
+            //Simple check for duplicate objects if any 
             for (let i = 0; i < articles.length; i++) {
                 for (let j = 0; j < articles.length; j++) {
                     if ((articles[i].newsTitle === articles[j].newsTitle) && (i !== j)) {
