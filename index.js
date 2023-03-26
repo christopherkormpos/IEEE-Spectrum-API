@@ -14,7 +14,7 @@ const topics = ['Aerospace', 'Artificial Intelligence', 'Biomedical', 'Computing
     'Semiconductors', 'Sensors', 'Telecommunications', 'Transportation', 'The Institute']
 
 //when we request localhost:[port] we get this response
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     axios(url)
         .then(response => {
             const html = response.data
