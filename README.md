@@ -23,7 +23,7 @@ The parameters that will be requested via headers are:
 ## Example Request
 For this example we will be using Javascript and specifically Node.js. More examples and code snippets for other programming languages can be also found in the [API RapidAPI page](https://rapidapi.com/christopherkormpos/api/ieee-spectrum-api)
 
-const axios = require("axios");  
+`const axios = require("axios");  
   
 const options = {  
   method: 'GET',  
@@ -38,13 +38,13 @@ axios.request(options).then(function (response) {
 	console.log(response.data);  
 }).catch(function (error) {  
 	console.error(error);  
-});  
+});`
 
 ## Example Response
 The response data will have a JSON format of an array with 25-30 items.
 Both Body and Headers will be returned as well as the status code.
 The body will look like the example provided below:
-
+`
 [  
     {  
     newsTitle:"10 Graphs That Sum Up the State of AI in 2023"  
@@ -60,6 +60,7 @@ The body will look like the example provided below:
 }
 ...
 ]
+`
 
 ## Usefull Resources
 Before you start building your website solution make sure you visit our API page to get the latest version of this documentation as well as copy the code snippets and examples from our RapidAPI page for your convinience.
