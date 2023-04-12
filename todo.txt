@@ -2,6 +2,7 @@ Add new features:
 Sections as objects with 2 elements
     -sectiontitle
     -sectionurl
+GOOGLE DOCS
 DOCUMENTATION
 
 ---INSIDE THE ARTICLE---

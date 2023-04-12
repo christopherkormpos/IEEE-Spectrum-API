@@ -31,6 +31,7 @@ app.get('/api', (req, res) => {
                 const unfilteredSections = $(this).find('.all-related-sections').find('a').map(function () {
                     return $(this).text();
                 }).get();
+
                 let newsIsSponsored = false
 
                 //Simple check for when an article is sponsored the newsIsSponsored value to change to true
@@ -49,10 +50,10 @@ app.get('/api', (req, res) => {
 
                 articles.push({
                     newsTitle,
-                    newsUrl,
-                    newsTimetoRead,
                     newsSubHeadline,
+                    newsUrl,
                     newsDatePublished,
+                    newsTimetoRead,
                     newsSections,
                     newsImgSrc,
                     newsImgAlt,
