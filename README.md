@@ -60,7 +60,7 @@ The body will look like the example provided below:
     newsLikes:"3"  
     newsIsSponsored:false  
 }
-...
+//...More items and data will be displayed like the above example
 ]
 ```
 
