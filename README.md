@@ -21,7 +21,7 @@ The parameters that will be requested via headers are:
     -Your unique API key and 
     -The RapidAPI host 
 ## Example Request
-For this example we will be using Javascript and specifically Node.js. More examples and code snippets for other programming languages can be also found in the [API RapidAPI page](https://rapidapi.com/christopherkormpos/api/)ieee-spectrum-api
+For this example we will be using Javascript and specifically Node.js. More examples and code snippets for other programming languages can be also found in the [API RapidAPI page](https://rapidapi.com/christopherkormpos/api/ieee-spectrum-api)
 
 const axios = require("axios");  
   
