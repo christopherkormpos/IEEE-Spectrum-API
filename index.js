@@ -26,7 +26,7 @@ app.get('/api', (req, res) => {
                     || 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png'
                 //if newsImgSrc is undefined it will set it to the No Image Available png from the link
                 const newsImgAlt = $(this).find('img').attr('alt')
-                const newsDatePublished = $(this).find('.social-date').text()
+                const newsDatePublished = modifyString($(this).find('.social-date').text())
                 const newsLikes = $(this).find('.like-button').attr('data-post-likes')
                 const unfilteredSections = $(this).find('.all-related-sections').find('a').map(function () {
                     return $(this).text();
@@ -75,10 +75,26 @@ app.get('/api', (req, res) => {
             res.json(err)
         })
 })
+
 //Function that removes \n and spaces from the raw strings. Function call on newsTitle
 function removeSpacesAndNewlines(str) {
     str = str.trim();
     str = str.replace(/\n/g, '');
     return str;
+}
+
+//Function that checks if there is an 'm' or 'h' on a string. If true the string becomes string + 'ago'
+//Function call on newsDatePublished
+function modifyString(str) {
+    const match = str.match(/^(\d+)([mh]?)$/);
+    if (match) {
+        const num = match[1];
+        const unit = match[2];
+        const unitStr = unit === 'm' ? 'm' : unit === 'h' ? 'h' : '';
+        const newStr = num + unitStr + ' ago';
+        return newStr;
+    } else {
+        return str;
+    }
 }
 app.listen(port, () => console.log(`Server running on port ${port}`))

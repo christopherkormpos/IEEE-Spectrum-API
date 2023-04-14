@@ -2,8 +2,8 @@ Add new features:
 Sections as objects with 2 elements
     -sectiontitle
     -sectionurl
+GET NEWS SOURCE
 GOOGLE DOCS
-DOCUMENTATION
 
 ---INSIDE THE ARTICLE---
 WRITER
