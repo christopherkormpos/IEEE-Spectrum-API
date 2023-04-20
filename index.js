@@ -19,7 +19,7 @@ app.get('/api', (req, res) => {
             const articles = []
             $('.widget', html).each(function () {
                 const newsTitle = removeSpacesAndNewlines($(this).find('h2').text())
-                const newsTimetoRead = $(this).find('.time-to-read').text() || '3 min'
+                const newsTimetoRead = $(this).find('.time-to-read').text() || '3 min read'
                 const newsSubHeadline = $(this).find('h3').text()
                 const newsUrl = $(this).find('.widget__headline-text').attr('href')
                 const newsImgSrc = $(this).find('img').attr('data-runner-src')
